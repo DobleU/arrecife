@@ -7,9 +7,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 /*-------------General Style---------------------------------------*/
 html {
-	overflow-x: hidden !important;
+	
 	height: 100%;
+	overflow-x: hidden !important;
 	overflow-y: auto;
+	
 }
 body {
 	margin: 0;
@@ -20,7 +22,11 @@ body {
 	text-align: center;
 	background: #292929;
 	color: #000;
+	
+	
 	overflow-y: auto;
+	
+	
 	font-family: 'Poppins', sans-serif;
 }
 @-o-viewport {
@@ -55,8 +61,33 @@ body {
            color:#fff;
 			  font-size: 72px; /* Cambia el tamaño de la fuente aquí */
         }
-		
-		
+		.element-item {
+    z-index: 10000; /* Cursor personalizado */
+}
+	
+smoke {
+	z-index: 10001; 
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.5) 0%, transparent 70%);
+    pointer-events: none;
+    animation: fade 2s linear forwards;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(3);
+    }
+}
+
+
+	
 /* ---------Page preload--------------------------------------*/
 .loader-wrap {
 	position: fixed;

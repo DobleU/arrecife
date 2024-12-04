@@ -468,6 +468,9 @@ function initRestabook() {
         });
 
     }
+	
+	
+	
     //  cursor------------------	
     $(".hero-wrap , .column-section , .parallax-section , .dark-bg , .cs-content-container , .column-wrap-bg").on({
         mouseenter: function () {
@@ -513,15 +516,44 @@ function initRestabook() {
     var active = false;
     var ball = document.querySelector('.element-item');
     TweenLite.set(ball, {
-        xPercent: -50,
+      xPercent: -50,
         yPercent: -50
     });
-    document.addEventListener("mousemove", mouseMove);
+   
+ 
+   document.addEventListener("mousemove", mouseMove);
     function mouseMove(e) {
+		
+		
+		 
         var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         mouse.x = e.pageX;
         mouse.y = e.pageY - scrollTop;
+		
+		
+		
+		
+	/*	
+		// Actualiza la posición del cursor personalizado
+    TweenLite.to(ball, 0.4, {
+        x: mouse.x,
+        y: mouse.y
+    });
+
+    const smoke = document.createElement('div');
+	smoke.className = 'smoke';
+	smoke.style.left = `${mouse.x}px`;
+	smoke.style.top = `${mouse.y}px`;
+	document.body.appendChild(smoke);
+
+	setTimeout(() => {
+		smoke.remove();
+	}, 2000); // Elimina el humo después de 2 segundos
+	*/
     }
+	
+
+	
     TweenMax.ticker.addEventListener("tick", updatePosition);
     function updatePosition() {
         if (!active) {
